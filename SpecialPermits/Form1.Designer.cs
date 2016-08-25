@@ -73,14 +73,14 @@
             this.loadChar1 = new System.Windows.Forms.ToolStripMenuItem();
             this.loadChar2 = new System.Windows.Forms.ToolStripMenuItem();
             this.loadChar3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.maxAllTicketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label_charName = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.maxAllTicketsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -109,14 +109,14 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.openToolStripMenuItem.Text = "Load";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -153,6 +153,22 @@
             this.loadChar3.Size = new System.Drawing.Size(163, 22);
             this.loadChar3.Text = "Load Character 3";
             this.loadChar3.Click += new System.EventHandler(this.loadChar3_Click);
+            // 
+            // toolsToolStripMenuItem
+            // 
+            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.maxAllTicketsToolStripMenuItem});
+            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
+            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // maxAllTicketsToolStripMenuItem
+            // 
+            this.maxAllTicketsToolStripMenuItem.Enabled = false;
+            this.maxAllTicketsToolStripMenuItem.Name = "maxAllTicketsToolStripMenuItem";
+            this.maxAllTicketsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.maxAllTicketsToolStripMenuItem.Text = "Max All Tickets";
+            this.maxAllTicketsToolStripMenuItem.Click += new System.EventHandler(this.maxAllTicketsToolStripMenuItem_Click);
             // 
             // label_charName
             // 
@@ -221,22 +237,6 @@
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
-            // toolsToolStripMenuItem
-            // 
-            this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.maxAllTicketsToolStripMenuItem});
-            this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
-            this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
-            this.toolsToolStripMenuItem.Text = "Tools";
-            // 
-            // maxAllTicketsToolStripMenuItem
-            // 
-            this.maxAllTicketsToolStripMenuItem.Enabled = false;
-            this.maxAllTicketsToolStripMenuItem.Name = "maxAllTicketsToolStripMenuItem";
-            this.maxAllTicketsToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.maxAllTicketsToolStripMenuItem.Text = "Max All Tickets";
-            this.maxAllTicketsToolStripMenuItem.Click += new System.EventHandler(this.maxAllTicketsToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,7 +249,8 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Special Permit Editor";
+            this.Text = "Special Permits Editor";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
